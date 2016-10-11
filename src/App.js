@@ -3,7 +3,7 @@ import axios from 'axios';
 import Slider from 'react-slick';
 import './styles/Styles.css';
 
-//to-do block pinterest plugin
+//Note about Axios and react-slick: I've used both of these in the past. I find Axios to have a really clean syntax with easy to use promise library, it's fast and well documented. Slick is exactly what it's tag line says - it's the last course you'll ever need. I've used it on several production sites in the past, including www.intentionalfutures.com. This is the first time I've used the react version of the slide show and besides some initial frustration trying to get it to load dynamic images it continues to not disappoint. I had considered writing my own slideshow but the reality is that I would never do that unless there were very specific requirements that made using an out of the box solution like slick not feasible.
 
 let App = React.createClass ({
 
@@ -53,7 +53,6 @@ let App = React.createClass ({
         return (<div key={index}>{photo}</div>);
     });
 
-
     let settings = {
       dots: false,
       infinite: true,
@@ -61,7 +60,6 @@ let App = React.createClass ({
       slidesToShow: 1,
       slidesToScroll: 1
     };
-
 
     return (
       <div className='container'>
