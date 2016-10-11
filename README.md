@@ -1,17 +1,15 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
+# Development
+1. Install Node and NPM
+2. Run `npm install`
+3. Run `npm start` to begin development server, include hot loading for css changes and live reload for javaScript changes
+4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.<br />
+You will also see any lint errors in the console.
 
-## Available Scripts
+## Additional Scripts
 
 From the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
 
 ### `npm test`
 
