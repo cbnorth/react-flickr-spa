@@ -15,7 +15,7 @@ let App = React.createClass ({
   },
 
   getPhotos() {
-    axios.get('https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=6d169abba1c0afe3002ea6c9a5549924&tags=iceland&accuracy=62.00%2C+64.00%2C+18.00%2C+21.00&per_page=50&format=json&nojsoncallback=1&auth_token=72157673746422511-9255a2ac10975a54&api_sig=d92d88f49dff674c923c39b531142fe6')
+    axios.get('https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=866983a71b23a727937534fa25c5327a&tags=iceland&accuracy=62.00%2C+64.00%2C+18.00%2C+21.00&per_page=50&format=json&nojsoncallback=1')
       .then((response) =>{
         this.setState({
           data: response.data.photos.photo,
