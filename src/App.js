@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import './App.css';
+import React from 'react';
 import axios from 'axios';
 import Slider from 'react-slick';
 import './styles/Styles.css';
 
+//to-do block pinterest plugin
 
 let App = React.createClass ({
 
@@ -40,12 +40,16 @@ let App = React.createClass ({
         let photoID = this.state.data[key].id;
         let secret = this.state.data[key].secret;
         let title = this.state.data[key].title;
-        this.state.photos.push(<img src={`https://farm${farm}.staticflickr.com/${serverID}/${photoID}_${secret}_b.jpg`} key={key} data-title={`${title}`} alt={`${title}`}/>);
+        let url = `https://farm${farm}.staticflickr.com/${serverID}/${photoID}_${secret}_b.jpg`;
+        let backgroundStyle = {
+            backgroundImage: `url(${url})`
+        }
+        this.state.photos.push(<div><div className="slide-slide__backgroundImage" style={backgroundStyle}></div><img src={`${url}`} key={key} data-title={`${title}`} alt={`${title}`}/></div>);
       }
     };
 
 
-    var items = this.state.photos.map(function (photo, index) {
+    let items = this.state.photos.map(function (photo, index) {
         return (<div key={index}>{photo}</div>);
     });
 
@@ -63,6 +67,7 @@ let App = React.createClass ({
       <div className='container'>
         <h1>React Flickr Slideshow</h1>
         <Slider {...settings}>{items}</Slider>
+        <a href="https://github.com/chrisburkedev/react-flickr-spa" target="_blank" className="sourceLink">Github Source</a>
       </div>
     );
   }
